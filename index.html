@@ -1,0 +1,136 @@
+<!DOCTYPE html>  
+<html lang="en-US"><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->  
+  <head>
+    <meta charset="utf-8">
+    <title> Edge of Empire Character Generator</title>
+    <link rel="stylesheet" href="./styles/Styles.css">
+  </head>
+  <body>
+    <header>
+      <h1></h1>
+    </header>
+    <header>
+      <h2> Edge of Empire Character Generator</h2>
+    </header>  
+    <table>
+      <tbody>
+        <tr>
+          <h3> Select a Species: </h3>
+        </tr>
+        <tr>
+          <p><button onclick="PickingaSpecies('Bothan')">Bothan</button>
+          <button onclick="PickingaSpecies('Droid')">Droid</button>
+          <button onclick="PickingaSpecies('Gand')">Gand</button>
+          <button onclick="PickingaSpecies('Human')">Human</button>
+          <button onclick="PickingaSpecies('Rodian')">Rodian</button>
+          <button onclick="PickingaSpecies('Trandoshan')">Trandoshan</button>
+          <button onclick="PickingaSpecies('Twilek')">Twi'lek</button>
+          <p><button onclick="PickingaSpecies('Wookiee')">Wookiee</button></p>
+        </tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+        <tr>
+          <h3>Select a Career Specialization: </h3>
+        </tr>
+        <tr>
+          <p><br> Bounty Hunter: </p>
+        </tr>
+        <tr>
+          <p><button onclick="PickingaSpecialization('Assassain')">Assassain</button>
+          <button onclick="PickingaSpecialization('Gadgeteer')">Gadgeteer</button>
+          <button onclick="PickingaSpecialization('Survivalist')">Survivalist</button></p>
+        </tr>
+        <tr>
+          <p> Colonist: </p>
+        </tr>
+        <tr>
+          <p><button onclick="PickingaSpecialization('Doctor')">Doctor</button>
+          <button onclick="PickingaSpecialization('Politico')">Politico</button>
+          <button onclick="PickingaSpecialization('Scholar')">Scholar</button></p>
+        </tr>
+        <tr>
+          <p> Exlporer: </p>
+        </tr>
+        <tr>
+          <p><button onclick="PickingaSpecialization('Fringer')">Fringer</button>
+          <button onclick="PickingaSpecialization('Scout')">Scout</button>
+          <button onclick="PickingaSpecialization('Trader')">Trader</button></p>
+        </tr>
+        <tr>
+          <p> Hired Gun: </p>
+        </tr>
+        <tr>
+          <p><button onclick="PickingaSpecialization('Bodyguard')">Bodyguard</button>
+          <button onclick="PickingaSpecialization('Marauder')">Marauder</button>
+          <button onclick="PickingaSpecialization('Mercenary')">Mercenary</button></p>
+        </tr>
+        <tr>
+          <p> Smuggler: </p>
+        </tr>
+        <tr>
+          <p><button onclick="PickingaSpecialization('Pilot')">Pilot</button>
+          <button onclick="PickingaSpecialization('Scoundral')">Scoundral</button>
+          <button onclick="PickingaSpecialization('Thief')">Thief</button></p>
+        </tr>
+        <tr>
+          <p> Technician: </p>
+        </tr>
+        <tr>
+          <p><button onclick="PickingaSpecialization('Mechanic')">Mechanic</button>
+          <button onclick="PickingaSpecialization('Outlaw Tech')">Outlaw Tech</button>
+          <button onclick="PickingaSpecialization('Slicer')">Slicer</button></p>
+        </tr>
+        <tr>
+          <h3> Pick Two Skills: </h3>
+        </tr>
+        <tr>
+          <input id="deselect1" type ="checkbox" onclick="PickingClassSkills('astrogation')" >Astrogation
+          <input id="deselect2" type ="checkbox" onclick="PickingClassSkills('athletics')" >Athletics
+          <input id="deselect3" type ="checkbox" onclick="PickingClassSkills('brawl')" >Brawl
+          <input id="deselect4" type ="checkbox" onclick="PickingClassSkills('charm')" >Charm
+          <input id="deselect5" type ="checkbox" onclick="PickingClassSkills('coercion')" >Coercion
+          <input id="deselect6" type ="checkbox" onclick="PickingClassSkills('computers')" >Computers
+          <input id="deselect7" type ="checkbox" onclick="PickingClassSkills('cool')" >Cool
+          <input id="deselect8" type ="checkbox" onclick="PickingClassSkills('coordination')" >Coordination
+          <input id="deselect9" type ="checkbox" onclick="PickingClassSkills('coreWorlds')" >Core Worlds<br>
+          <input id="deselect10" type ="checkbox" onclick="PickingClassSkills('deception')" >Deception
+          <input id="deselect11" type ="checkbox" onclick="PickingClassSkills('discipline')" >Discipline
+          <input id="deselect12" type ="checkbox" onclick="PickingClassSkills('education')" >Education
+          <input id="deselect13" type ="checkbox" onclick="PickingClassSkills('gunnery')" >Gunnery
+          <input id="deselect14" type ="checkbox" onclick="PickingClassSkills('leadership')" >Leadership
+          <input id="deselect15" type ="checkbox" onclick="PickingClassSkills('lore')" >Lore
+          <input id="deselect16" type ="checkbox" onclick="PickingClassSkills('mechanics')" >Mechanics
+          <input id="deselect17" type ="checkbox" onclick="PickingClassSkills('medicine')" >Medicine
+          <input id="deselect18" type ="checkbox" onclick="PickingClassSkills('melee')" >Melee<br>
+          <input id="deselect19" type ="checkbox" onclick="PickingClassSkills('negotiation')" >Negotiation
+          <input id="deselect20" type ="checkbox" onclick="PickingClassSkills('outerRim')" >Outer Rim
+          <input id="deselect21" type ="checkbox" onclick="PickingClassSkills('perception')" >Perception
+          <input id="deselect22" type ="checkbox" onclick="PickingClassSkills('pilotingPlanetary')" >Piloting (Planetary)
+          <input id="deselect23" type ="checkbox" onclick="PickingClassSkills('pilotingSpace')" >Piloting (Space)
+          <input id="deselect24" type ="checkbox" onclick="PickingClassSkills('rangedHeavy')" >Ranged (Heavy)
+          <input id="deselect25" type ="checkbox" onclick="PickingClassSkills('rangedLight')" >Ranged (Light)<br>
+          <input id="deselect26" type ="checkbox" onclick="PickingClassSkills('resilience')" >Resilience
+          <input id="deselect27" type ="checkbox" onclick="PickingClassSkills('skulduggery')" >Skulduggery
+          <input id="deselect28" type ="checkbox" onclick="PickingClassSkills('stealth')" >Stealth
+          <input id="deselect29" type ="checkbox" onclick="PickingClassSkills('streetwise')" >Streetwise
+          <input id="deselect30" type ="checkbox" onclick="PickingClassSkills('survival')" >Survival
+          <input id="deselect31" type ="checkbox" onclick="PickingClassSkills('underworld')" >Underworld
+          <input id="deselect32" type ="checkbox" onclick="PickingClassSkills('vigilance')" >Vigilance
+          <input id="deselect33" type ="checkbox" onclick="PickingClassSkills('xenology')" >Xenology
+          <p><button onclick ="PickingClassSkills('reset')">RESET SKILLS</button></p>
+        </tr>
+      </tbody>
+    </table>
+    <h4>Character Stats:</h4>
+    <pre><h4 id="chrsts"></h4></pre>
+    <pre><h4 id="chrspec"></h4></pre>
+    <h4>Character Career Specialization:</h4>
+    <h4 id="chrcar"></h4>
+    <pre class="output">
+    <script src="javascript/Class_Skills_Function.js"></script>
+    <script src="javascript/Specialization_and_Career_Function.js"></script>
+    <script src="javascript/Species_Function.js"></script>
+  </body>
+</html>

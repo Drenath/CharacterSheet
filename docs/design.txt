@@ -1,0 +1,1275 @@
+PROBLEM STATEMENT:
+Write a program that allows users to input a species, class, specialization, and class skills for
+the Star Wars Edge of Empire roleplaying game. Make it so that depending on the species they pick,
+the different values are displayed. Also display any inputs made for class specialization, as well
+as any class skills picked as well along with its rank. 
+Along with this, dertermine different outputs to display depending on the different values of skills,
+careers, specializations, and species.
+
+Nouns: 
+  species
+  class 
+  specialization
+  class skills
+  values
+  rank
+  
+Verbs:
+  input
+  display
+  determine
+  output
+  
+  
+  
+EdgeofEmpireCharacterGenerator
+  initialize astrogation to 0
+  initialize athletics to 0
+  initialize brawl to 0
+  initialize career to ""
+  initialize csAstrogation to false
+  initialize csAthletics to false
+  initialize csBrawl to false
+  initialize csCharm to false
+  initialize classSkill to ""
+  initialize csCoercion to false
+  initialize csComputers to false
+  initialize csCool to false
+  initialize csCoordination to false
+  initialize csCoreWorlds to false
+  initialize csDeception to false
+  initialize csDiscipline to false
+  initialize csEducation to false
+  initialize csGunnery to false
+  initialize csLeadership to false
+  initialize csLore to false
+  initialize csMechanics to false
+  initialize csMedicine to false
+  initialize csMelee to false
+  initialize csNegotiation to false
+  initialize csOuterRim to false
+  initialize csPerception to false
+  initialize csPilotingPlanetary to false
+  initialize csPilotingSpace to false
+  initialize csRangedHeavy to false
+  initialize csRangedLight to false
+  initialize csResilience to false
+  initialize csSkulduggery to false
+  initialize csStealth to false
+  initialize csStreetwise to false
+  initialize csSurvival to false
+  initialize csUnderworld to false
+  initialize csVigilance to false
+  initialize csXenology to false
+  initialize charm to 0
+  initialize coercion to 0
+  initialize computers to 0
+  initialize cool to 0
+  initialize coordination to 0
+  initialize coreWorlds to 0
+  initialize deception to 0
+  initialize discipline to 0
+  initialize education to 0
+  initialize gunnery to 0
+  initialize iOutput to ""
+  initialize leadership to 0
+  initialize lore to 0
+  initialize mechanics to 0
+  initialize medicine to 0
+  initialize melee to 0
+  initialize negotiation to 0
+  initialize outerRim to 0
+  initialize perception to 0
+  initialize pilotingPlanetary to 0
+  initialize pilotingSpace to 0
+  initialize rangedHeavy to 0
+  initialize rangedLight to 0
+  initialize resilience to 0
+  initialize skillCounter to 1
+  initialize skulduggery to 0
+  initialize specialization to ""
+  initialize species to ""
+  initialize startingAgility to 0
+  initialize startingBrawn to 0
+  initialize startingCunning to 0
+  initialize startingExperience to 0
+  initialize startingIntellect to 0
+  initialize startingPresence to 0
+  initialize startingWillpower to 0
+  initialize stats to ""
+  initialize stealth to 0
+  initialize strainThreshold to 0
+  initialize streetwise to 0
+  initialize survival to 0
+  initialize underworld to 0
+  initialize vigilance to 0
+  initialize woundThreshold to 0
+  initialize wOutput to ""
+  initialize xenology to 0
+
+  FUNCTION PickingaSpecies varA 
+    species is equals to varA
+    IF species equals and is the same type as "Bothan" 
+      startingAgility equals 2
+      startingBrawn equals 1
+      startingCunning equals 3
+      startingExperience equals 100 
+      startingIntellect equals 2
+      startingPresence equals 2
+      startingWillpower equals 2
+      strainThreshold equals 11 + startingWillpower
+      woundThreshold equals 10 + startingBrawn
+    END
+    ELSE IF species equals and is the same type as "Droid" 
+      startingAgility equals 1
+      startingBrawn equals 1
+      startingCunning equals 1
+      startingExperience equals 175 
+      startingIntellect equals 1
+      startingPresence equals 1
+      startingWillpower equals 1
+      strainThreshold equals 10 + startingWillpower
+      woundThreshold equals 10 + startingBrawn
+    END
+    ELSE IF species equals and is the same type as "Gand" 
+      startingAgility equals 2
+      startingBrawn equals 2
+      startingCunning equals 2
+      startingExperience equals 100
+      startingIntellect equals 2
+      startingPresence equals 1
+      startingWillpower equals 3
+      strainThreshold equals 10 + startingWillpower
+      woundThreshold equals 10 + startingBrawn
+    END
+    ELSE IF species equals and is the same type as "Human" 
+      startingAgility equals 2
+      startingBrawn equals 2
+      startingCunning equals 2
+      startingExperience equals 110 
+      startingIntellect equals 2
+      startingPresence equals 2
+      startingWillpower equals 2
+      strainThreshold equals 10 + startingWillpower 
+      woundThreshold equals 10 + startingBrawn
+    END
+    ELSE IF species equals and is the same type as "Rodian" 
+      startingAgility equals 2
+      startingBrawn equals 3
+      startingCunning equals 2
+      startingExperience equals 100 
+      startingIntellect equals 2
+      startingPresence equals 2
+      startingWillpower equals 1
+      strainThreshold equals 10 + startingWillpower
+      woundThreshold equals 10 + startingBrawn
+    END
+    ELSE IF species equals and is the same type as "Trandoshan" 
+      startingAgility equals 1
+      startingBrawn equals 3
+      startingCunning equals 2
+      startingExperience equals 90 
+      startingIntellect equals 2
+      startingPresence equals 2
+      startingWillpower equals 2
+      strainThreshold equals 9 + startingWillpower
+      woundThreshold equals 12 + startingBrawn
+    END
+    ELSE IF species equals and is the same type as "Twilek" 
+      startingAgility equals 2
+      startingBrawn equals 1
+      startingCunning equals 2
+      startingExperience equals 100 
+      startingIntellect equals 2
+      startingPresence equals 3
+      startingWillpower equals 2
+      strainThreshold equals 11 + startingWillpower
+      woundThreshold equals 10 + startingBrawn
+    END
+    ELSE IF species equals and is the same type as "Wookiee" 
+      startingAgility equals 2
+      startingBrawn equals 3
+      startingCunning equals 2
+      startingExperience equals 90 
+      startingIntellect equals 2
+      startingPresence equals 2
+      startingWillpower equals 1
+      strainThreshold equals 8 + startingWillpower
+      woundThreshold equals 14 + startingBrawn
+    END
+
+    stats equals "\nBrawn: " + startingBrawn + "\nAgility: " + startingAgility + "\nCunning: " + startingCunning + 
+             "\nIntellect: " + startingIntellect + "\nPresence: " + startingPresence + "\nWillpower: " + 
+             startingWillpower + "\nStrain Threshold: " + strainThreshold + "\nWound Threshold: " + woundThreshold +
+             "\nExperience: " + startingExperience
+
+    Write to inner html through id "chrsts" which equals "Your species is " + species + stats
+   
+  FUNCTION PickingaSpecialization (varB) 
+    specialization equals varB
+    IF specialization equals and is the same type as "Assassain" 
+      csMelee equals true
+      csRangedHeavy equals true
+      csSkulduggery equals true
+      csStealth equals true
+    END
+   ELSE IF specialization equals and is the same type as "Gadgeteer" 
+      csBrawl equals true
+      csCoercion equals true
+      csMechanics equals true
+      csRangedLight equals true      
+    END
+    ELSE IF specialization equals and is the same type as "Survivalist" 
+      csXenology equals true
+      csPerception equals true
+      csResilience equals true
+      csSurvival equals true
+    END
+    ELSE IF specialization equals and is the same type as "Doctor" 
+      csCool equals true
+      csEducation equals true
+      csMedicine equals true
+      csResilience equals true
+    END 
+    ELSE IF specialization equals and is the same type as "Politico" 
+      csCharm equals true
+      csCoercion equals true
+      csDeception equals true
+      csCoreWorlds equals true
+    END
+    ELSE IF specialization equals and is the same type as "Scholar" 
+      csOuterRim equals true
+      csUnderworld equals true
+      csXenology equals true
+      csPerception equals true
+    END
+    ELSE IF specialization equals and is the same type as "Fringer" 
+      csAthletics equals true
+      csMedicine equals true
+      csPilotingPlanetary equals true
+      csSurvival equals true
+    END
+    ELSE IF specialization equals and is the same type as "Scout" 
+      csDeception equals true
+      csCoreWorlds equals true
+      csUnderworld equals true
+      csNegotiation equals true
+    END
+    ELSE IF specialization equals and is the same type as "Trader" 
+      csDeception equals true
+      csCoreWorlds equals true
+      csUnderworld equals true
+      csNegotiation equals true
+    END
+    ELSE IF specialization equals and is the same type as "Bodyguard" 
+      csGunnery equals true
+      csPerception equals true
+      csPilotingPlanetary equals true
+      csRangedHeavy equals true
+    END
+    ELSE IF specialization equals and is the same type as "Marauder" 
+      csCoercion equals true
+      csMelee equals true
+      csResilience equals true
+      csSurvival equals true
+    END
+    ELSE IF specialization equals and is the same type as "Mercenary" 
+      csDiscipline equals true
+      csGunnery equals true
+      csLeadership equals true
+      csRangedHeavy equals true
+    END
+    ELSE IF specialization equals and is the same type as "Pilot" 
+      csAstrogation equals true
+      csGunnery equals true
+      csPilotingPlanetary equals true
+      csPilotingSpace equals true
+    END
+    ELSE IF specialization equals and is the same type as "Scoundrel" 
+      csCharm equals true
+      csCool equals true
+      csDeception equals true
+      csRangedLight equals true
+    END
+    ELSE IF specialization equals and is the same type as "Thief" 
+      csComputers equals true
+      csSkulduggery equals true
+      csStealth equals true
+      csVigilance equals true
+    END
+    ELSE IF specialization equals and is the same type as "Mechanic" 
+      csBrawl equals true
+      csMechanics equals true
+      csPilotingSpace equals true
+      csSkulduggery equals true
+    END
+    ELSE IF specialization equals and is the same type as "Outlaw Tech" 
+      csEducation equals true
+      csUnderworld equals true
+      csMechanics equals true
+      csStreetwise equals true
+    END
+    ELSE IF specialization equals and is the same type as "Slicer" 
+      csComputers equals true
+      csEducation equals true
+      csUnderworld equals true
+      csStealth equals true
+    END
+    IF specialization equals and is the same type as "Assassain" OR specialization equals and is the same type as "Gadgeteer" OR specialization equals and is the same type as "Survivalist" 
+      career equals "Bounty Hunter"
+      csAthletics equals true
+      csBrawl equals true
+      csPerception equals true
+      csPilotingPlanetary equals true
+      csPilotingSpace equals true
+      csRangedHeavy equals true
+      csStreetwise equals true
+      csVigilance equals true
+    END
+    IF specialization equals and is the same type as "Doctor" OR specialization equals and is the same type as "Politico" OR specialization equals and is the same type as "Scholar" 
+      career equals "Colonist"
+      csCharm equals true
+      csDeception equals true
+      csCoreWorlds equals true
+      csEducation equals true
+      csLore equals true
+      csLeadership equals true
+      csNegotiation equals true
+      csStreetwise equals true
+    END
+    IF specialization equals and is the same type as "Fringer" OR specialization equals and is the same type as "Scout" OR specialization equals and is the same type as "Trader" 
+      career equals "Explorer"
+      csAstrogation equals true
+      csCool equals true
+      csLore equals true
+      csOuterRim equals true
+      csXenology equals true
+      csPerception equals true
+      csPilotingSpace equals true
+      csSurvival equals true
+    END
+    IF specialization equals and is the same type as "Bodyguard" OR specialization equals and is the same type as "Marauder" OR specialization equals and is the same type as "Mercenary" 
+      career equals "Hired Gun"
+      csAthletics equals true
+      csBrawl equals true
+      csDiscipline equals true
+      csMelee equals true
+      csPilotingPlanetary equals true
+      csRangedLight equals true
+      csResilience equals true
+      csVigilance equals true
+    END
+    IF specialization equals and is the same type as "Pilot" OR specialization equals and is the same type as "Scoundrel" OR specialization equals and is the same type as "Thief" 
+      career equals "Smuggler"
+      csCoordination equals true
+      csDeception equals true
+      csUnderworld equals true
+      csPerception equals true
+      csPilotingSpace equals true
+      csSkulduggery equals true
+      csStreetwise equals true
+      csVigilance equals true
+    END
+    IF specialization equals and is the same type as "Mechanic" OR specialization equals and is the same type as "Outlaw Tech" OR specialization equals and is the same type as "Slicer" 
+      career equals "Technician"
+      csAstrogation equals true
+      csComputers equals true
+      csCoordination equals true
+      csDiscipline equals true
+      csOuterRim equals true
+      csMechanics equals true
+      csPerception equals true
+      csPilotingPlanetary equals true
+    END
+     Write to inner html through id "chrcar" which equals "\nYou have chosen the " + career + " career, and the " + specialization + " specialization."
+  END
+
+
+  FUNCTION PickingClassSkills(varC) 
+    classSkill equals varC
+    IF classSkill equals and is the same type as "astrogation" AND skillCounter is greater than or 2 
+      add to the total of astrogation  by 1
+      skillCounter increases by 1
+      IF astrogation equals and is the same type as 1 
+        add to the total of wOutput  "Your Astrogation rank is " + astrogation + ". You have a basic knowledge of the galaxy.\n"
+      END
+      ELSE IF astrogation equals and is the same type as 2 
+        add to the total of wOutput  "Your Astrogation rank is " + astrogation + ". You have knowledge of the galaxy as a whole.\n"
+      END
+      ELSE IF astrogation equals and is the same type as 3 
+        add to the total of wOutput  "Your Astrogation rank is " + astrogation + ". You have knowledge of all major sectors and planets.\n"
+      END
+      ELSE IF astrogation equals and is the same type as 4 
+        add to the total of wOutput  "Your Astrogation rank is " + astrogation + ". You have knowledge of all planets and sectors.\n"
+      END
+      ELSE IF astrogation equals and is the same type as 5 
+        add to the total of wOutput  "Your Astrogation rank is " + astrogation + ". Your knowledge of the galaxy is unrivalled.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "athletics" AND skillCounter is greater than or equals 2 
+      add to the total of athletics by 1
+      skillCounter increases by 1
+      IF athletics equals and is the same type as 1 
+        add to the total of wOutput  "Your Athletics rank is " + athletics + ". You are somewhat athletic.\n"
+      END
+      ELSE IF athletics equals and is the same type as 2 
+        add to the total of wOutput  "Your Athletics rank is " + athletics + ". You are able to maneuver with ease.\n"
+      END
+      ELSE IF athletics equals and is the same type as 3 
+        add to the total of wOutput  "Your Athletics rank is " + athletics + ". You are extremely agile.\n"
+      END
+      ELSE IF athletics equals and is the same type as 4 
+        add to the total of wOutput  "Your Athletics rank is " + athletics + ". Your speed is so fast, it is hard to keep track of you.\n"
+      END
+      ELSE IF athletics equals and is the same type as 5 
+        add to the total of wOutput  "Your Athletics rank is " + athletics + ". Your reactions are almost instant.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "brawl" AND skillCounter is greater than or equals 2 
+      add to the total of brawl by 1
+      skillCounter increases by 1
+      IF brawl equals and is the same type as 1 
+        add to the total of wOutput  "Your Brawl rank is " + brawl + ". You know the basics of unarmed combat.\n"
+      END
+      ELSE IF brawl equals and is the same type as 2 
+        add to the total of wOutput  "Your Brawl rank is " + brawl + ". You are familiar with unarmed combat.\n"
+      END
+      ELSE IF brawl equals and is the same type as 3 
+        add to the total of wOutput  "Your Brawl rank is " + brawl + ". You are skilled with unarmed combat.\n"
+      END
+      ELSE IF brawl equals and is the same type as 4 
+        add to the total of wOutput  "Your Brawl rank is " + brawl + ". You are able to incapacitate foes with ease.\n"
+      END
+      ELSE IF brawl equals and is the same type as 5 
+        add to the total of wOutput  "Your Brawl rank is " + brawl + ". Your hand to hand combat is unrivalled.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "charm" AND skillCounter is greater than or equals 2 
+     add to the total of charm by 1
+      skillCounter increases by 1
+      IF charm equals and is the same type as 1 
+        add to the total of wOutput  "Your Charm rank is " + charm + ". You understand the basics of charming people.\n"
+      END
+      ELSE IF charm equals and is the same type as 2 
+        add to the total of wOutput  "Your Charm rank is " + charm + ". You understand most social interactions.\n"
+      END
+      ELSE IF charm equals and is the same type as 3 
+        add to the total of wOutput  "Your Charm rank is " + charm + ". Your personality and looks are very appealing to others.\n"
+      END
+      ELSE IF charm equals and is the same type as 4 
+        add to the total of wOutput  "Your Charm rank is " + charm + ". People go out of their way to please you.\n"
+      END
+      ELSE IF charm equals and is the same type as 5 
+        add to the total of wOutput  "Your Charm rank is " + charm + ". You are able to get anything you want from people.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "coercion" AND skillCounter is greater than or equals 2 
+      add to the total of coercion by 1
+      skillCounter increases by 1
+      IF coercion equals and is the same type as 1 
+        add to the total of wOutput  "Your Coercion rank is " + coercion + ". You are not easily swayed.\n"
+      END
+      ELSE IF coercion equals and is the same type as 2 
+        add to the total of wOutput  "Your Coercion rank is " + coercion + ". You are able to withstand persuasion.\n"
+      END 
+      ELSE IF coercion equals and is the same type as 3 
+        add to the total of wOutput  "Your Coercion rank is " + coercion + ". You are able to resist even torture to divulge information. "
+      END
+      ELSE IF coercion equals and is the same type as 4 
+        add to the total of wOutput  "Your Coercion rank is " + coercion + ". It is extremely difficult to convince you to do anything.\n"
+      END
+      ELSE IF coercion equals and is the same type as 5 
+        add to the total of wOutput  "Your Coercion rank is " + coercion + ". You have an unbreakable willpower.\n"
+      END
+    END 
+    IF classSkill equals and is the same type as "computers" AND skillCounter is greater than or equals 2 
+      add to the total of computers by 1
+      skillCounter increases by 1
+      IF computers equals and is the same type as 1 
+        add to the total of wOutput  "Your Computer rank is " + computers + ". You understand the basics of some devices.\n"
+      END
+      ELSE IF computers equals and is the same type as 2 
+        add to the total of wOutput  "Your Computer rank is " + computers + ". You understand the basics of most devices.\n"
+      END
+      ELSE IF computers equals and is the same type as 3 
+        add to the total of wOutput  "Your Computer rank is " + computers + ". You understand the ins and outs of devices.\n"
+      END
+      ELSE IF computers equals and is the same type as 4 
+        add to the total of wOutput  "Your Computer rank is " + computers + ". You are extremely skilled at finding and using information in devices.\n"
+      END
+      ELSE IF computers equals and is the same type as 5 
+        add to the total of wOutput  "Your Computer rank is " + computers + ". Your hacking skills are unrivalled"
+      END
+    END 
+    IF classSkill equals and is the same type as "cool" AND skillCounter is greater than or equals 2 
+      add to the total of cool by 1
+      skillCounter increases by 1
+      IF cool equals and is the same type as 1 
+        add to the total of wOutput  "Your Cool rank is " + cool + ". You are kind of cool.\n"
+      END
+      ELSE IF cool equals and is the same type as 2 
+        add to the total of wOutput  "Your Cool rank is " + cool + ". You are cooler than most people.\n"
+      END
+      ELSE IF cool equals and is the same type as 3 
+        add to the total of wOutput  "Your Cool rank is " + cool + ". People think that you are cool.\n"
+      END
+      ELSE IF cool equals and is the same type as 4 
+        add to the total of wOutput  "Your Cool rank is " + cool + ". You know you are the coolest.\n"
+      END
+      ELSE IF cool equals and is the same type as 5 
+        add to the total of wOutput  "Your Cool rank is " + cool + ". People know you are the coolest.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "coordination" AND skillCounter is greater than or equals 2 
+      add to the total of coordination by 1
+      skillCounter increases by 1
+      IF coordination equals and is the same type as 1 
+        add to the total of wOutput  "Your Coordination rank is " + coordination + ". You are somewhat coordinated.\n"
+      END
+      ELSE IF coordination equals and is the same type as 2 
+        add to the total of wOutput  "Your Coordination rank is " + coordination + ". You are coordinated.\n"
+      END
+      ELSE IF coordination equals and is the same type as 3 
+        add to the total of wOutput  "Your Coordination rank is " + coordination + ". You can travel across narrow surfaces with ease.\n"
+      END
+      ELSE IF coordination equals and is the same type as 4 
+        add to the total of wOutput  "Your Coordination rank is " + coordination + ". You can cross almost any obstacle you meet.\n"
+      END
+      ELSE IF coordination equals and is the same type as 5 
+        add to the total of wOutput  "Your Coordination rank is " + coordination + ". Your coordination is perfect.\n"
+      END
+    END 
+    IF classSkill equals and is the same type as "coreWorlds" AND skillCounter is greater than or equals 2 
+      add to the total of coreWorlds by 1
+      skillCounter increases by 1
+      IF coreWorlds equals and is the same type as 1 
+        add to the total of wOutput  "Your Core Worlds rank is " + coreWorlds + ". You have a basic understanding of the core worlds.\n"
+      END
+      ELSE IF coreWorlds equals and is the same type as 2 
+        add to the total of wOutput  "Your Core Worlds rank is " + coreWorlds + ". You understand the behaviors of people from certain core worlds.\n"
+      END
+      ELSE IF coreWorlds equals and is the same type as 3 
+        add to the total of wOutput  "Your Core Worlds rank is " + coreWorlds + ". You can easily identify someone from the core worlds.\n"
+      END
+      ELSE IF coreWorlds equals and is the same type as 4 
+        add to the total of wOutput  "Your Core Worlds rank is " + coreWorlds + ". You can identify items from the core worlds.\n"
+      END
+      ELSE IF coreWorlds equals and is the same type as 5 
+        add to the total of wOutput  "Your Core Worlds rank is " + coreWorlds + ". You can identify anything from the core worlds.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "deception" AND skillCounter is greater than or equals 2 
+      add to the total of deception by 1
+      skillCounter increases by 1
+      IF deception equals and is the same type as 1 
+        add to the total of wOutput  "Your Deception rank is " + deception + ". You know the basics of tricking people.\n"
+      END
+      ELSE IF deception equals and is the same type as 2 
+        add to the total of wOutput  "Your Deception rank is " + deception + ". You are able to to distract and mislead to get what you want.\n"
+      END
+      ELSE IF deception equals and is the same type as 3 
+        add to the total of wOutput  "Your Deception rank is " + deception + ". You can deceive people with ease.\n"
+      END
+      ELSE IF deception equals and is the same type as 4 
+        add to the total of wOutput  "Your Deception rank is " + deception + ". You can convince almost anyone that what you are saying is true.\n"
+      END
+      ELSE IF deception equals and is the same type as 5 
+        add to the total of wOutput  "Your Deception rank is " + deception + ". It is impossible to distinguish your lies from the truth.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "discipline" AND skillCounter is greater than or equals 2 
+      add to the total of discipline by 1
+      skillCounter increases by 1
+      IF discipline equals and is the same type as 1 
+        add to the total of wOutput  "Your Discipline rank is " + discipline + ". You can somewhat control your emotions.\n"
+      END
+      ELSE IF discipline equals and is the same type as 2 
+        add to the total of wOutput  "Your Discipline rank is " + discipline + ". You are able to calm yourself in difficult times.\n"
+      END
+      ELSE IF discipline equals and is the same type as 3 
+        add to the total of wOutput  "Your Discipline rank is " + discipline + ". You are able to distinguish lies from truth with ease.\n"
+      END
+      ELSE IF discipline equals and is the same type as 4 
+        add to the total of wOutput  "Your Discipline rank is " + discipline + ". It is nearly impossible to get to you.\n"
+      END
+      ELSE IF discipline equals and is the same type as 5 
+        add to the total of wOutput  "Your Discipline rank is " + discipline + ". You are always in control of your emotions.\n"
+      END
+    END 
+    IF classSkill equals and is the same type as "education" AND skillCounter is greater than or equals 2 
+      add to the total of education by 1
+      skillCounter increases by 1
+      IF education equals and is the same type as 1 
+        add to the total of wOutput  "Your Education rank is " + education + ". You are somewhat educated.\n"
+      END
+      ELSE IF education equals and is the same type as 2 
+        add to the total of wOutput  "Your Education rank is " + education + ". You are educated.\n"
+      END
+      ELSE IF education equals and is the same type as 3 
+        add to the total of wOutput  "Your Education rank is " + education + ". You have a higher understanding of science and politics.\n"
+      END
+      ELSE IF education equals and is the same type as 4 
+        add to the total of wOutput  "Your Education rank is " + education + ". You are an expert in most areas of education.\n"
+      END
+      ELSE IF education equals and is the same type as 5 
+        add to the total of wOutput  "Your Education rank is " + education + ". You are considered a genius.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "gunnery" AND skillCounter is greater than or equals 2 
+      add to the total of gunnery by 1
+      skillCounter increases by 1
+      IF gunnery equals and is the same type as 1 
+        add to the total of wOutput  "Your Gunnery rank is " + gunnery + ". You know the basics of being a gunner.\n"
+      END
+      ELSE IF gunnery equals and is the same type as 2 
+        add to the total of wOutput  "Your Gunnery rank is " + gunnery + ". You are proficient with gun emplacements.\n"
+      END
+      ELSE IF gunnery equals and is the same type as 3 
+        add to the total of wOutput  "Your Gunnery rank is " + gunnery + ". You are a highly skilled gunner.\n"
+      END
+      ELSE IF gunnery equals and is the same type as 4 
+        add to the total of wOutput  "Your Gunnery rank is " + gunnery + ". You are one of the best shooters in the galaxy.\n"
+      END
+      ELSE IF gunnery equals and is the same type as 5 
+        add to the total of wOutput  "Your Gunnery rank is " + gunnery + ". Your accuracy and skill as a gunner are unmatched.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "leadership" AND skillCounter is greater than or equals 2 
+      add to the total of leadership by 1
+      skillCounter increases by 1
+      IF leadership equals and is the same type as 1 
+        add to the total of wOutput  "Your Leadership rank is " + leadership + ". Your know the basics of leadership.\n"
+      END
+      ELSE IF leadership equals and is the same type as 2 
+        add to the total of wOutput  "Your Leadership rank is " + leadership + ". You are able to rally your allies.\n"
+      END
+      ELSE IF leadership equals and is the same type as 3 
+        add to the total of wOutput  "Your Leadership rank is " + leadership + ". Your can sway crowds with ease.\n"
+      END
+      ELSE IF leadership equals and is the same type as 4 
+        add to the total of wOutput  "Your Leadership rank is " + leadership + ". Your very presence inspires.\n"
+      END
+      ELSE IF leadership equals and is the same type as 5 
+        add to the total of wOutput  "Your Leadership rank is " + leadership + ". Your leadership is unrivalled.\n"
+      END
+    END 
+    IF classSkill equals and is the same type as "lore" AND skillCounter is greater than or equals 2 
+      add to the total of lore by 1
+      skillCounter increases by 1
+      IF lore equals and is the same type as 1 
+        add to the total of wOutput  "Your Lore rank is " + lore + ". You have a basic understanding of history.\n"
+      END
+      ELSE IF lore equals and is the same type as 2 
+        add to the total of wOutput  "Your Lore rank is " + lore + ". You can decipher basic writings old writings.\n"
+      END
+      ELSE IF lore equals and is the same type as 3 
+        add to the total of wOutput  "Your Lore rank is " + lore + ". You have heard most legends and stories of older times.\n"
+      END
+      ELSE IF lore equals and is the same type as 4 
+        add to the total of wOutput  "Your Lore rank is " + lore + ". You can decipher almost anything.\n"
+      END
+      ELSE IF lore equals and is the same type as 5 
+        add to the total of wOutput  "Your Lore rank is " + lore + ". You know everything about the old world.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "mechanics" AND skillCounter is greater than or equals 2 
+      add to the total of mechanics by 1
+      skillCounter increases by 1
+      IF mechanics equals and is the same type as 1 
+        add to the total of wOutput  "Your Mechanics rank is " + mechanics + ". You know the basics of mechanics.\n"
+      END
+      ELSE IF mechanics equals and is the same type as 2 
+        add to the total of wOutput  "Your Mechanics rank is " + mechanics + ". You are able to repair most devices.\n"
+      END
+      ELSE IF mechanics equals and is the same type as 3 
+        add to the total of wOutput  "Your Mechanics rank is " + mechanics + ". You can construct new devices from old ones.\n"
+      END
+      ELSE IF mechanics equals and is the same type as 4 
+        add to the total of wOutput  "Your Mechanics rank is " + mechanics + ". You can repair almost anything.\n"
+      END
+      ELSE IF mechanics equals and is the same type as 5 
+        add to the total of wOutput  "Your Mechanics rank is " + mechanics + ". You are a master mechanic.\n"
+      END
+    END 
+    IF classSkill equals and is the same type as "medicine" AND skillCounter is greater than or equals 2 
+      add to the total of by medicine 1
+      skillCounter increases by 1
+      IF medicine equals and is the same type as 1 
+        add to the total of wOutput  "Your Medicine rank is " + medicine + ". You know the basics of medicine.\n"
+      END
+      ELSE IF medicine equals and is the same type as 2 
+        add to the total of wOutput  "Your Medicine rank is " + medicine + ". You can identify most poisons and diseases.\n"
+      END
+      ELSE IF medicine equals and is the same type as 3 
+        add to the total of wOutput  "Your Medicine rank is " + medicine + ". You can heal most sever wounds.\n"
+      END
+      ELSE IF medicine equals and is the same type as 4 
+        add to the total of wOutput  "Your Medicine rank is " + medicine + ". You can treat most diseases and poisons.\n"
+      END
+      ELSE IF medicine equals and is the same type as 5 
+        add to the total of wOutput  "Your Medicine rank is " + medicine + ". You are able to treat the most severe wounds.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "melee" AND skillCounter is greater than or equals 2 
+      add to the total of melee by 1
+      skillCounter increases by 1
+      IF melee equals and is the same type as 1 
+        add to the total of wOutput  "Your Melee rank is " + melee + ". You know the basics of melee combat.\n"
+      END
+      ELSE IF melee equals and is the same type as 2 
+        add to the total of wOutput  "Your Melee rank is " + melee + ". You are familiar with melee combat.\n"
+      END
+      ELSE IF melee equals and is the same type as 3 
+        add to the total of wOutput  "Your Melee rank is " + melee + ". You are skilled with melee combat.\n"
+      END
+      ELSE IF melee equals and is the same type as 4 
+        add to the total of wOutput  "Your Melee rank is " + melee + ". You are able to incapacitate foes with ease.\n"
+      END
+      ELSE IF melee equals and is the same type as 5 
+        add to the total of wOutput  "Your Melee rank is " + melee + ". Your melee combat is unrivalled.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "negotiation" AND skillCounter is greater than or equals 2 
+      add to the total of negotiation by 1
+      skillCounter increases by 1
+      IF negotiation equals and is the same type as 1 
+        add to the total of wOutput  "Your Negotiation rank is " + negotiation + ". You know the basics of negotiation.\n"
+      END
+      ELSE IF negotiation equals and is the same type as 2 
+        add to the total of wOutput  "Your Negotiation rank is " + negotiation + ". You are skilled at negotiation.\n"
+      END
+      ELSE IF negotiation equals and is the same type as 3 
+        add to the total of wOutput  "Your Negotiation rank is " + negotiation + ". You almost always end up with a favorable deal.\n"
+      END
+      ELSE IF negotiation equals and is the same type as 4 
+        add to the total of wOutput  "Your Negotiation rank is " + negotiation + ". You are a master of negotiating.\n"
+      END
+      ELSE IF negotiation equals and is the same type as 5 
+        add to the total of wOutput  "Your Negotiation rank is " + negotiation + ". You can negotiate out of impossible situations.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "outerRim" AND skillCounter is greater than or equals 2 
+      add to the total of by outerRim 1
+      skillCounter increases by 1
+      IF outerRim equals and is the same type as 1 
+        add to the total of wOutput  "Your Outer Rim rank is " + outerRim + ". You know the general layout of the Outer Rim.\n"
+      END
+      ELSE IF outerRim equals and is the same type as 2 
+        add to the total of wOutput  "Your Outer Rim rank is " + outerRim + ". You know the locations of some resources in the Outer Rim.\n"
+      END
+      ELSE IF outerRim equals and is the same type as 3 
+        add to the total of wOutput  "Your Outer Rim rank is " + outerRim + ". You know the social conducts of people from certain areas in the Outer Rim.\n"
+      END
+      ELSE IF outerRim equals and is the same type as 4 
+        add to the total of wOutput  "Your Outer Rim rank is " + outerRim + ". You know where identify most items from the Outer Rim.\n"
+      END
+      ELSE IF outerRim equals and is the same type as 5 
+        add to the total of wOutput  "Your Outer Rim rank is " + outerRim + ". You know everything there is to know about the Outer Rim.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "perception" AND skillCounter is greater than or equals 2 
+      add to the total of perception by 1
+      skillCounter increases by 1
+      IF perception equals and is the same type as 1 
+        add to the total of wOutput  "Your Perception rank is " + perception + ". You know can perceive few things.\n"
+      END
+      ELSE IF perception equals and is the same type as 2 
+        add to the total of wOutput  "Your Perception rank is " + perception + ". You can perceive large details.\n"
+      END
+      ELSE IF perception equals and is the same type as 3 
+        add to the total of wOutput  "Your Perception rank is " + perception + ". You can perceive small details.\n"
+      END
+      ELSE IF perception equals and is the same type as 4 
+        add to the total of wOutput  "Your Perception rank is " + perception + ". You know can perceive obscured details.\n"
+      END
+      ELSE IF perception equals and is the same type as 5 
+        add to the total of wOutput  "Your Perception rank is " + perception + ". You know can perceive anything.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "pilotingPlanetary" AND skillCounter is greater than or equals 2 
+      add to the total of pilotingPlanetary by 1
+      skillCounter increases by 1
+      IF pilotingPlanetary equals and is the same type as 1 
+        add to the total of wOutput  "Your Piloting  Planetary  rank is " + pilotingPlanetary + ". You know the basics of piloting.\n"
+      END
+      ELSE IF pilotingPlanetary equals and is the same type as 2 
+        add to the total of wOutput  "Your Piloting  Planetary  rank is " + pilotingPlanetary + ". You can pilot most ships.\n"
+      END
+      ELSE IF pilotingPlanetary equals and is the same type as 3 
+        add to the total of wOutput  "Your Piloting  Planetary  rank is " + pilotingPlanetary + ". You are an ace pilot.\n"
+      END
+      ELSE IF pilotingPlanetary equals and is the same type as 4 
+        add to the total of wOutput  "Your Piloting  Planetary  rank is " + pilotingPlanetary + ". Ships feel an extension of you.\n"
+      END
+      ELSE IF pilotingPlanetary equals and is the same type as 5 
+        add to the total of wOutput  "Your Piloting  Planetary  rank is " + pilotingPlanetary + ". You skills as a pilot are unmatched.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "pilotingSpace" AND skillCounter is greater than or equals 2 
+      add to the total of pilotingSpace by 1
+      skillCounter increases by 1
+      IF pilotingSpace equals and is the same type as 1 
+        add to the total of wOutput  "Your Piloting  Space  rank is " + pilotingSpace + ". You know the basics of piloting.\n"
+      END
+      ELSE IF pilotingSpace equals and is the same type as 2 
+        add to the total of wOutput  "Your Piloting  Space  rank is " + pilotingSpace + ". You can pilot most ships.\n"
+      END
+      ELSE IF pilotingSpace equals and is the same type as 3 
+        add to the total of wOutput  "Your Piloting  Space  rank is " + pilotingSpace + ". You are an ace pilot.\n"
+      END
+      ELSE IF pilotingSpace equals and is the same type as 4 
+        add to the total of wOutput  "Your Piloting  Space  rank is " + pilotingSpace + ". Ships feel an extension of you.\n"
+      END
+      ELSE IF pilotingSpace equals and is the same type as 5 
+        add to the total of wOutput  "Your Piloting  Space  rank is " + pilotingSpace + ". You skills as a pilot are unmatched.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "rangedHeavy" AND skillCounter is greater than or equals 2 
+      add to the total of rangedHeavy by 1
+      skillCounter increases by 1
+      IF rangedHeavy equals and is the same type as 1 
+        add to the total of wOutput  "Your Ranged  Heavy  rank is " + rangedHeavy + ". You know the basics of heavy firearms.\n"
+      END
+      ELSE IF rangedHeavy equals and is the same type as 2 
+        add to the total of wOutput  "Your Ranged  Heavy  rank is " + rangedHeavy + ". You can account for wind resistance with your firearms.\n"
+      END
+      ELSE IF rangedHeavy equals and is the same type as 3 
+        add to the total of wOutput  "Your Ranged  Heavy  rank is " + rangedHeavy + ". You are a highly skilled marksman.\n"
+      END
+      ELSE IF rangedHeavy equals and is the same type as 4 
+        add to the total of wOutput  "Your Ranged  Heavy  rank is " + rangedHeavy + ". You are one of the best shooters in the galaxy.\n"
+      END
+      ELSE IF rangedHeavy equals and is the same type as 5 
+        add to the total of wOutput  "Your Ranged  Heavy  rank is " + rangedHeavy + ". Your accuracy and skill are unmatched with firearms.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "rangedLight" AND skillCounter is greater than or equals 2 
+      add to the total of rangedLight by 1
+      skillCounter increases by 1
+      IF rangedLight equals and is the same type as 1 
+        add to the total of wOutput  "Your Ranged  Light  rank is " + rangedLight + ". You know the basics of light firearms.\n"
+      END
+      ELSE IF rangedLight equals and is the same type as 2 
+        add to the total of wOutput  "Your Ranged  Light  rank is " + rangedLight + ". You can account for wind resistance with your firearms.\n"
+      END
+      ELSE IF rangedLight equals and is the same type as 3 
+        add to the total of wOutput  "Your Ranged  Light  rank is " + rangedLight + ". You are a highly skilled marksman.\n"
+      END
+      ELSE IF rangedLight equals and is the same type as 4 
+        add to the total of wOutput  "Your Ranged  Light  rank is " + rangedLight + ". You are one of the best shooters in the galaxy.\n"
+      END
+      ELSE IF rangedLight equals and is the same type as 5 
+        add to the total of wOutput  "Your Ranged  Light  rank is " + rangedLight + ". Your accuracy and skill are unmatched with firearms.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "resilience" AND skillCounter is greater than or equals 2 
+      add to the total of resilience by 1
+      skillCounter increases by 1
+      IF resilience equals and is the same type as 1 
+        add to the total of wOutput  "Your Resilience rank is " + resilience + ". You become fatigued less easily.\n"
+      END
+      ELSE IF resilience equals and is the same type as 2 
+        add to the total of wOutput  "Your Resilience rank is " + resilience + ". Toxins affect your body less than normal.\n"
+      END
+      ELSE IF resilience equals and is the same type as 3 
+        add to the total of wOutput  "Your Resilience rank is " + resilience + ". Your body is unaffected by weather and pollution.\n"
+      END
+      ELSE IF resilience equals and is the same type as 4 
+        add to the total of wOutput  "Your Resilience rank is " + resilience + ". You are immune to toxins.\n"
+      END
+      ELSE IF resilience equals and is the same type as 5 
+        add to the total of wOutput  "Your Resilience rank is " + resilience + ". Your body is resistant to almost all affects.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "skulduggery" AND skillCounter is greater than or equals 2 
+      add to the total of skulduggery by 1
+      skillCounter increases by 1
+      IF skulduggery equals and is the same type as 1 
+        add to the total of wOutput  "Your Skulduggery rank is " + skulduggery + ". You know the basics of being a criminal.\n"
+      END
+      ELSE IF skulduggery equals and is the same type as 2 
+        add to the total of wOutput  "Your Skulduggery rank is " + skulduggery + ". You are a proficient pickpocket.\n"
+      END
+      ELSE IF skulduggery equals and is the same type as 3 
+        add to the total of wOutput  "Your Skulduggery rank is " + skulduggery + ". You are proficient at stealing undetected.\n"
+      END
+      ELSE IF skulduggery equals and is the same type as 4 
+        add to the total of wOutput  "Your Skulduggery rank is " + skulduggery + ". You are a master thief.\n"
+      END
+      ELSE IF skulduggery equals and is the same type as 5 
+        add to the total of wOutput  "Your Skulduggery rank is " + skulduggery + ". Your skills as a criminal are unmatched.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "stealth" AND skillCounter is greater than or equals 2 
+      add to the total of stealth by 1
+      skillCounter increases by 1
+      IF stealth equals and is the same type as 1 
+        add to the total of wOutput  "Your Stealth rank is " + stealth + ". You know the basics of sneaking.\n"
+      END
+      ELSE IF stealth equals and is the same type as 2 
+        add to the total of wOutput  "Your Stealth rank is " + stealth + ". You are proficient at sneaking.\n"
+      END
+      ELSE IF stealth equals and is the same type as 3 
+        add to the total of wOutput  "Your Stealth rank is " + stealth + ". You blend into your environment with ease.\n"
+      END
+      ELSE IF stealth equals and is the same type as 4 
+        add to the total of wOutput  "Your Stealth rank is " + stealth + ". You are a master of stealth.\n"
+      END
+      ELSE IF stealth equals and is the same type as 5 
+        add to the total of wOutput  "Your Stealth rank is " + stealth + ". You are practically invisible when you want to be.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "streetwise" AND skillCounter is greater than or equals 2 
+      add to the total of streetwise by 1
+      skillCounter increases by 1
+      IF streetwise equals and is the same type as 1 
+        add to the total of wOutput  "Your Streetwise rank is " + streetwise + ". You know the basics of how to act around criminals.\n"
+      END
+      ELSE IF streetwise equals and is the same type as 2 
+        add to the total of wOutput  "Your Streetwise rank is " + streetwise + ". You know how to act as IF you were a criminal.\n"
+      END
+      ELSE IF streetwise equals and is the same type as 3 
+        add to the total of wOutput  "Your Streetwise rank is " + streetwise + ". You can pick up on subtle body language and attitudes.\n"
+      END
+      ELSE IF streetwise equals and is the same type as 4 
+        add to the total of wOutput  "Your Streetwise rank is " + streetwise + ". You can easily identify criminals and black market dealers.\n"
+      END
+      ELSE IF streetwise equals and is the same type as 5 
+        add to the total of wOutput  "Your Streetwise rank is " + streetwise + ". You are a master of fitting in with criminals and dealers.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "survival" AND skillCounter is greater than or equals 2 
+      add to the total of survival by 1
+      skillCounter increases by 1
+      IF survival equals and is the same type as 1 
+        add to the total of wOutput  "Your Survival rank is " + survival + ". You know the basics of survival.\n"
+      END
+      ELSE IF survival equals and is the same type as 2 
+        add to the total of wOutput  "Your Survival rank is " + survival + ". You are adept at survival.\n"
+      END
+      ELSE IF survival equals and is the same type as 3 
+        add to the total of wOutput  "Your Survival rank is " + survival + ". You are a master of wilderness.\n"
+      END
+      ELSE IF survival equals and is the same type as 4 
+        add to the total of wOutput  "Your Survival rank is " + survival + ". You are a master of survival.\n"
+      END
+      ELSE IF survival equals and is the same type as 5 
+        add to the total of wOutput  "Your Survival rank is " + survival + ". You know the wilderness inside and out.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "underworld" AND skillCounter is greater than or equals 2 
+      add to the total of underworld by 1
+      skillCounter increases by 1
+      IF underworld equals and is the same type as 1 
+        add to the total of wOutput  "Your Underworld rank is " + underworld + ". You know the basics of the underworld.\n"
+      END
+      ELSE IF underworld equals and is the same type as 2 
+        add to the total of wOutput  "Your Underworld rank is " + underworld + ". You know about some of the criminal activities that happen.\n"
+      END
+      ELSE IF underworld equals and is the same type as 3 
+        add to the total of wOutput  "Your Underworld rank is " + underworld + ". You know about certain gangs in certain areas.\n"
+      END
+      ELSE IF underworld equals and is the same type as 4 
+        add to the total of wOutput  "Your Underworld rank is " + underworld + ". You understand criminals and what they will do"
+      END
+      ELSE IF underworld equals and is the same type as 5 
+        add to the total of wOutput  "Your Underworld rank is " + underworld + ". You know everything about criminals and the underworld.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "vigilance" AND skillCounter is greater than or equals 2 
+      add to the total of vigilance by 1
+      skillCounter increases by 1
+      IF vigilance equals and is the same type as 1 
+        add to the total of wOutput  "Your Vigilance rank is " + vigilance + ". You are somewhat vigilant.\n"
+      END
+      ELSE IF vigilance equals and is the same type as 2 
+        add to the total of wOutput  "Your Vigilance rank is " + vigilance + ". You are well prepared for some situations.\n"
+      END
+      ELSE IF vigilance equals and is the same type as 3 
+        add to the total of wOutput  "Your Vigilance rank is " + vigilance + ". You are well prepared for most situations.\n"
+      END
+      ELSE IF vigilance equals and is the same type as 4 
+        add to the total of wOutput  "Your Vigilance rank is " + vigilance + ". You are ready for anything that can happen.\n"
+      END
+      ELSE IF vigilance equals and is the same type as 5 
+        add to the total of wOutput  "Your Vigilance rank is " + vigilance + ". You react to any situation almost instantly.\n"
+      END
+    END
+    IF classSkill equals and is the same type as "xenology" AND skillCounter is greater than or equals 2 
+      add to the total of xenology by 1
+      skillCounter increases by 1
+      IF xenology equals and is the same type as 1 
+        add to the total of wOutput  "Your Xenology rank is " + xenology + ". You know the basics of most species.\n"
+      END
+      ELSE IF xenology equals and is the same type as 2 
+        add to the total of wOutput  "Your Xenology rank is " + xenology + ". You are familiar with most species.\n"
+      END
+      ELSE IF xenology equals and is the same type as 3 
+        add to the total of wOutput  "Your Xenology rank is " + xenology + ". You know the biology of most species"
+      END
+      ELSE IF xenology equals and is the same type as 4 
+        add to the total of wOutput  "Your Xenology rank is " + xenology + ". You know the mannerisms of most species.\n"
+      END
+      ELSE IF xenology equals and is the same type as 5 
+        add to the total of wOutput  "Your Xenology rank is " + xenology + ". You can identify the weaknesses of all species.\n"
+      END
+    END
+    
+    IF classSkill equals and is the same type as "reset" 
+      skillCounter equals 1
+      wOutput equals ""
+      astrogation equals 0
+      athletics equals 0
+      brawl equals 0
+      charm equals 0
+      coercion equals 0
+      computers equals 0
+      cool equals 0
+      coordination equals 0
+      coreWorlds equals 0
+      deception equals 0
+      discipline equals 0
+      education equals 0
+      gunnery equals 0
+      leadership equals 0
+      lore equals 0
+      mechanics equals 0
+      medicine equals 0
+      melee equals 0
+      negotiation equals 0
+      outerRim equals 0
+      perception equals 0
+      pilotingPlanetary equals 0
+      pilotingSpace equals 0
+      rangedHeavy equals 0
+      rangedLight equals 0
+      resilience equals 0
+      skulduggery equals 0
+      stealth equals 0
+      streetwise equals 0
+      survival equals 0
+      underworld equals 0
+      vigilance equals 0
+      xenology equals 0
+      
+      Uncheck box where id is deselect1 by making the check false
+      Uncheck box where id is deselect2 by making the check false
+      Uncheck box where id is deselect3 by making the check false
+      Uncheck box where id is deselect4 by making the check false
+      Uncheck box where id is deselect5 by making the check false
+      Uncheck box where id is deselect6 by making the check false
+      Uncheck box where id is deselect7 by making the check false
+      Uncheck box where id is deselect8 by making the check false
+      Uncheck box where id is deselect9 by making the check false
+      Uncheck box where id is deselect10 by making the check false
+      Uncheck box where id is deselect11 by making the check false
+      Uncheck box where id is deselect12 by making the check false
+      Uncheck box where id is deselect13 by making the check false
+      Uncheck box where id is deselect14 by making the check false
+      Uncheck box where id is deselect15 by making the check false
+      Uncheck box where id is deselect16 by making the check false
+      Uncheck box where id is deselect17 by making the check false
+      Uncheck box where id is deselect18 by making the check false
+      Uncheck box where id is deselect19 by making the check false
+      Uncheck box where id is deselect20 by making the check false
+      Uncheck box where id is deselect21 by making the check false
+      Uncheck box where id is deselect22 by making the check false
+      Uncheck box where id is deselect23 by making the check false
+      Uncheck box where id is deselect24 by making the check false
+      Uncheck box where id is deselect25 by making the check false
+      Uncheck box where id is deselect26 by making the check false
+      Uncheck box where id is deselect27 by making the check false
+      Uncheck box where id is deselect28 by making the check false
+      Uncheck box where id is deselect29 by making the check false
+      Uncheck box where id is deselect30 by making the check false
+      Uncheck box where id is deselect31 by making the check false
+      Uncheck box where id is deselect32 by making the check false
+      Uncheck box where id is deselect33 by making the check false
+    END 
+    Write to inner html through id "chrspec" where equals wOutput
+  END
+  
+  WHILE skillCounter is less than index 
+    iOutput equals "You have " + ((index + 1) - skillCounter) + " skills remaining.\n"
+    index decreases by 1.
+  END
+  Write to inner html through id "chrspec" and add to the total iOutput
+END  
+
+
+
+TEST PLANS:
+  VARIABLES: species, specialization, career, classSkill (can be reset)
+
+  TEST CASE 1:
+    INPUTS: bothan, assassain, astrogation, computers.
+    EXPECTED RESULTS:
+      Your species is Bothan
+      Brawn: 1
+      Agility: 2
+      Cunning: 3
+      Intellect: 2
+      Presence: 2
+      Willpower: 2
+      Strain Threshold: 13
+      Wound Threshold: 11
+      Experience: 100
+
+      Your Astrogation rank is 1. You have a basic knowledge of the galaxy.
+      Your Computer rank is 1. You understand the basics of some devices.
+
+      You have chosen the Bounty Hunter career, and the Assassain specialization.
+    ACTUAL RESULTS:
+        Your species is Bothan
+        Brawn: 1
+        Agility: 2
+        Cunning: 3
+        Intellect: 2
+        Presence: 2
+        Willpower: 2
+        Strain Threshold: 13
+        Wound Threshold: 11
+        Experience: 100
+
+        Your Astrogation rank is 1. You have a basic knowledge of the galaxy.
+        Your Computer rank is 1. You understand the basics of some devices.
+
+        You have chosen the Bounty Hunter career, and the Assassain specialization.
+  
+  TEST CASE 2:
+    INPUTS: wookie, trader, xenology, underworld
+    EXPECTED RESULTS:
+      Your species is Wookiee
+      Brawn: 3
+      Agility: 2
+      Cunning: 2
+      Intellect: 2
+      Presence: 2
+      Willpower: 1
+      Strain Threshold: 9
+      Wound Threshold: 17
+      Experience: 90
+
+      Your Xenology rank is 1. You know the basics of most species.
+      Your Underworld rank is 1. You know the basics of the underworld.
+
+      You have chosen the Explorer career, and the Trader specialization.
+    ACTUAL RESULTS:
+        Your species is Wookiee
+        Brawn: 3
+        Agility: 2
+        Cunning: 2
+        Intellect: 2
+        Presence: 2
+        Willpower: 1
+        Strain Threshold: 9
+        Wound Threshold: 17
+        Experience: 90
+
+        Your Xenology rank is 1. You know the basics of most species.
+        Your Underworld rank is 1. You know the basics of the underworld.
+
+        You have chosen the Explorer career, and the Trader specialization.
+          
+  TEST CASE 3:
+    INPUTS: gand, scholar, xenology, xenology
+    EXPECTED RESULTS:
+      Your species is Gand
+      Brawn: 2
+      Agility: 2
+      Cunning: 2
+      Intellect: 2
+      Presence: 1
+      Willpower: 3
+      Strain Threshold: 13
+      Wound Threshold: 12
+      Experience: 100
+
+      Your Xenology rank is 1. You know the basics of most species.
+      Your Xenology rank is 2. You are familiar with most species.
+
+      You have chosen the Colonist career, and the Scholar specialization.
+    ACTUAL RESULTS:
+      Your species is Gand
+      Brawn: 2
+      Agility: 2
+      Cunning: 2
+      Intellect: 2
+      Presence: 1
+      Willpower: 3
+      Strain Threshold: 13
+      Wound Threshold: 12
+      Experience: 100
+
+      Your Xenology rank is 1. You know the basics of most species.
+      Your Xenology rank is 2. You are familiar with most species.
+
+      You have chosen the Colonist career, and the Scholar specialization.
+
+  TEST CASE 4:
+    INPUTS: human, trader, charm, coercion, reset, skulduggery, brawl
+    EXPECTED RESULTS:
+      Your species is Human
+      Brawn: 2
+      Agility: 2
+      Cunning: 2
+      Intellect: 2
+      Presence: 2
+      Willpower: 2
+      Strain Threshold: 12
+      Wound Threshold: 12
+      Experience: 110
+
+      Your Skulduggery rank is 1. You know the basics of being a criminal.
+      Your Brawl rank is 1. You know the basics of unarmed combat.
+
+      You have chosen the Explorer career, and the Trader specialization.
+    ACTUAL RESULTS:
+      Your species is Human
+      Brawn: 2
+      Agility: 2
+      Cunning: 2
+      Intellect: 2
+      Presence: 2
+      Willpower: 2
+      Strain Threshold: 12
+      Wound Threshold: 12
+      Experience: 110
+
+      Your Skulduggery rank is 1. You know the basics of being a criminal.
+      Your Brawl rank is 1. You know the basics of unarmed combat
+
+      You have chosen the Explorer career, and the Trader specialization.
+
+  TEST CASE 5:
+    INPUTS: Droid, Rodian, Doctor, Marauder, reset, cool, reset, coordination
+    EXPECTED RESULTS:
+      Your species is Rodian
+      Brawn: 3
+      Agility: 2
+      Cunning: 2
+      Intellect: 2
+      Presence: 2
+      Willpower: 1
+      Strain Threshold: 11
+      Wound Threshold: 13
+      Experience: 100
+
+      Your Coordination rank is 1. You are somewhat coordinated.
+
+      You have chosen the Hired Gun career, and the Marauder specialization.
+    ACTUAL RESULTS:
+      Your species is Rodian
+      Brawn: 3
+      Agility: 2
+      Cunning: 2
+      Intellect: 2
+      Presence: 2
+      Willpower: 1
+      Strain Threshold: 11
+      Wound Threshold: 13
+      Experience: 100
+
+      Your Coordination rank is 1. You are somewhat coordinated.
+
+      You have chosen the Hired Gun career, and the Marauder specialization.

@@ -1,0 +1,50 @@
+header{
+  background-color: #D2B48C;
+  display: block;
+}
+h2 {
+  font-family: Georgia;
+  text-align: center;
+}
+h1{
+  background-image: url(../images/horizonal_banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+body {
+  background-image: url(../images/Bossk.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+table {
+  font-size: 24px;
+}
+button {
+  font-size: 24px;
+}
+ p {
+  font-size: 24px;
+  text-align: left;
+  color: #003300;
+}
+h3 {
+  
+  text-align: left;
+  color: #003300;
+  font-size: 32px;
+}
+h4 {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 24px;
+}
+input[type=checkbox]
+{
+  -ms-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  padding: 5px;
+}
+
